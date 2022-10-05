@@ -6,7 +6,7 @@ const Father = styled.div`
 `;
 
 const Box = styled.div`
-  background-color: ${props => props.boxColor}; // 아래 bgColor을 props로 받아서 사용
+  background-color: ${props => props.boxColor}; // 아래 boxColor을 props로 받아서 사용
   width: 100px;
   height: 100px;
 `;
@@ -109,7 +109,7 @@ function App() {
   }
 
   return (
-    <Father as='header'>{/* 위에 Father라는 스타일을 여기다 넣는다 */}
+    <Father as='header'>{/* 위에 Father라는 스타일을 여기다 넣는다, header태그로 바꾼다 */}
       <Box boxColor='teal'>{/* Box 배경색을 위한 boxColor라는 prop생성 */}
         <Text>Hello</Text>
       </Box>
@@ -129,9 +129,9 @@ function App() {
       </Box2>
       <Emoji as='p'>😀</Emoji>{/* Emoji스타일을 사용하면서 p태그 사용 */}
       <br />
-      <Wrapper theme>
+      <Wrapper>
         <ChangeBtn btnText={btnValue} changeValue={changeValue}></ChangeBtn>
-        <Title theme='darkTheme'>hello</Title>
+        <Title>hello</Title>
       </Wrapper>
     </Father>
   );
